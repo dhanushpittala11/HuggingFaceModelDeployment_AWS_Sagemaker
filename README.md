@@ -16,4 +16,37 @@
 4. A user profile will be created automatically
     ![](launch_jupyterlab.png)
    Now, launch the Sagemaker Studio as shown here.
-5. In the Sagemaker Studio, select Instance type and then click on Run Lab
+5. In the Sagemaker Studio, select Instance type and then click on Run Lab. You will be directed to the JupyterLab notebook.
+    ![](Run_jupyterLab.png)
+
+## Run and Deploy the model
+  Upload the [notebook](hf.ipynb) on the environment and run it. Choose the instance type as per the availability in your zone.
+
+## Test Inference
+  1. On the Sagemaker Studio, go to Deployments section and click on Endpoints. The page will show Endpoint Summary. Below that, click on 
+     Test inference to perform the inference.
+  2. Under the JSON column, give the input in the form of question and context. For example-
+     ``` bash
+     {
+      "body": {
+        "inputs": {
+          "question": "How many indeginious territories exist in amazon rainforest?",
+          "context": "The Amazon rainforest,also called Amazon jungle or Amazonia, is a moist broadleaf tropical rainforest in the Amazon 
+           biome 
+           that covers most of the Amazon basin of South America. This basin encompasses 7,000,000 km2 (2,700,000 sq mi), of which 6,000,000 
+            km2 
+           (2,300,000 sq mi) are covered by the rainforest. This region includes territory belonging to nine nations and 3,344 indigenous 
+            territories."
+                }
+              },
+           "contentType": "application/json",
+        "endpointName": "huggingface-pytorch-inference-2024-12-07-13-31-37-510"
+      }
+      ```
+Refer to this image for reference.
+      ![](deploymentInference1.png) 
+      
+Refer to this image for the Inference result. The answer to the question is indicated by **"answer": "3,344"** meaning that the number of indeginious territories is 3344.
+
+
+   ![](DeploymentInference2.png)
