@@ -1,4 +1,4 @@
-# HuggingFaceModelDeployment_AWS_Sagemaker
+# HuggingFace Model Deployment on AWS Sagemaker
 
 ## Table of Contents
  * [Introduction](#introduction)
@@ -46,17 +46,40 @@
         "endpointName": "huggingface-pytorch-inference-2024-12-07-13-31-37-510"
       }
       ```
-Refer to this image for reference.
+     Refer to this image for reference.
       ![](deploymentInference1.png) 
       
-Refer to this image for the Inference result. The answer to the question is indicated by **"answer": "3,344"** meaning that the number of indeginious territories is 3344.
+     Refer to this image for the Inference result. The answer to the question is indicated by **"answer": "3,344"** meaning that the number 
+     of indeginious territories is 3344.
 
 
-   ![](DeploymentInference2.png)
+     ![](DeploymentInference2.png)
 
 ## Bug / Feature Request
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/dhanushpittala11/HuggingFaceModelDeployment_AWS_Sagemaker/issues/new) by including your search query and the expected result.
+  If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/dhanushpittala11/HuggingFaceModelDeployment_AWS_Sagemaker/issues/new) by including your search query and the expected 
+   result.
 
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/dhanushpittala11/HuggingFaceModelDeployment_AWS_Sagemaker/issues/new). Please include sample queries and their corresponding results.
+  If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/dhanushpittala11/HuggingFaceModelDeployment_AWS_Sagemaker/issues/new). Please include sample queries and their corresponding results.
 
 ## Techstack Used
+  ### Cloud and Storage
+   #### AWS Services:
+   * **Amazon SageMaker:** Used for deploying and managing machine learning models.
+   * **Amazon S3:** Default bucket for storing data, models, and logs.
+   * **IAM (Identity and Access Management):** For managing roles and permissions.
+  ### Machine Learning Frameworks
+   #### Hugging Face Transformers:
+   * **Model:** distilbert-base-uncased-distilled-squad (question-answering task). Deployed using the Hugging Face Model class in SageMaker.
+   * **PyTorch:** Backend framework for running the Transformer model.
+  ### Programming
+   * **Python:** Language for implementing the solution.
+   * **JupyterLab/Jupyter Notebooks:** Likely used for development and testing in SageMaker Studio.
+  ### Model Deployment
+   * **SageMaker Inference:** Deployment of the Hugging Face model to an endpoint for inference.
+   * **Instance Type:** ml.m5.xlarge
+  ### API Integration
+   * **Predict API:** Example request defined with inputs (question and context) for performing inference.
+  ### Development Tools
+   * **SageMaker Studio:** Integrated development environment for working with SageMaker.
+   * **Boto3:** AWS SDK for Python to interact with IAM for role setup.
+## License
