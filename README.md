@@ -14,4 +14,6 @@
 2. Open **AWS Sagemaker AI** service.
 3. Set up Domain
 4. A user profile will be created automatically
-    
+    ![](launch_jupyterlab.png)
+   Now, launch the Sagemaker Studio as shown here.
+5. In the Sagemaker Studio, select Instance type and then click on Run Lab
