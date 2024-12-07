@@ -5,6 +5,9 @@
  * [Setup of AWS Sagemaker Studio](#setup-of-aws-sagemaker-studio)
  * [Run and Deploy the model](#run-and-deploy-the-model)
  * [Test Inference](#test--inference)
+ * [Bug / Feature Request](#bug---feature-request)
+ * [Techstack Used](#techstack-used)
+ * [License](#license)
 
 ## Introduction
   This project is about using a huggingface model on the task of Question Answering and Deploying it on AWS Sagemaker Studio. First we create a bucket in AWS S3 where the model is stored. Then we configure for loading the model from the hub. Create IAM role with permissions to create an endpoint. Then the model is deployed to Sagemaker Inference.
@@ -50,3 +53,10 @@ Refer to this image for the Inference result. The answer to the question is indi
 
 
    ![](DeploymentInference2.png)
+
+## Bug / Feature Request
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/dhanushpittala11/HuggingFaceModelDeployment_AWS_Sagemaker/issues/new) by including your search query and the expected result.
+
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/dhanushpittala11/HuggingFaceModelDeployment_AWS_Sagemaker/issues/new). Please include sample queries and their corresponding results.
+
+## Techstack Used
